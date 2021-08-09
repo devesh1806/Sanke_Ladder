@@ -12,7 +12,8 @@ public class Snakeladder {
 		
 		int ran_num = (int)((Math.random()*10) % 6) + 1 ; //Rolling of dice implemented by using random function generating random numbers (1-6). 
 		
-
+		int times_roll = 0;  //variable for number of times dice rolled.  
+		
 		while ( player_pos < 100 ) {  //condition for player till reaching winning mark 100.
 			
 			int option_num = (int)((Math.random()*10) % 3); //Option number generated for next move between snake, ladder and no play.
@@ -31,9 +32,10 @@ public class Snakeladder {
 				break;
 			}
 			
+			times_roll+=1;
 			System.out.println("The current position of Player is " + player_pos);
-			
 		}
 		
+		System.out.println("The number of times dice rolled = " + times_roll);
 	}
 }
