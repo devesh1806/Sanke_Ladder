@@ -12,19 +12,26 @@ public class Snakeladder {
 		
 		int ran_num = (int)((Math.random()*10) % 6) + 1 ; //Rolling of dice implemented by using random function generating random numbers (1-6). 
 		
-		int option_num = (int)((Math.random()*10) % 3); //Option number generated for next move between snake, ladder and no play.
 
-		switch(option_num) {
-		case no_play:         //case for move regarding no play
-			break;  
-		case ladder:         //case for move regarding ladder   
-			player_pos += ran_num; 
-			break;
-		case snake:        //case for move regarding snake
-			player_pos -= ran_num; 
-			break;
+		while ( player_pos < 100 ) {  //condition for player till reaching winning mark 100.
+			
+			int option_num = (int)((Math.random()*10) % 3); //Option number generated for next move between snake, ladder and no play.
+			
+			switch(option_num) {
+			case no_play:         //case for move regarding no play
+				break;  
+			case ladder:         //case for move regarding ladder   
+				player_pos = player_pos + ran_num; 
+				break;
+			case snake:        //case for move regarding snake
+				player_pos = player_pos - ran_num;
+				if (player_pos<0) player_pos=0;  //condition for checking and making player position 0 if it goes below 0.
+				break;
+			}
+			
+			System.out.println("The current position of Player is " + player_pos);
+			
 		}
 		
-		System.out.println("The current position of Player is " + player_pos);
 	}
 }
