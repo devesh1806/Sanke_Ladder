@@ -1,1 +1,1 @@
-<h1>Welcome to Snake and Ladder stimulator</h1>
+<h1>Welcome to Snake and Ladder Stimulator</h1>
