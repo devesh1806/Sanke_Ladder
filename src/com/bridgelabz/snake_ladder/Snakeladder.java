@@ -10,11 +10,11 @@ public class Snakeladder {
 		
 		int player_pos=0; //start position of player is initialised with 0.
 		
-		int ran_num = (int)((Math.random()*10) % 6) + 1 ; //Rolling of dice implemented by using random function generating random numbers (1-6). 
 		
 
 		while ( player_pos < 100 ) {  //condition for player till reaching winning mark 100.
 			
+			int ran_num = (int)((Math.random()*10) % 6) + 1 ; //Rolling of dice implemented by using random function generating random numbers (1-6). 
 			int option_num = (int)((Math.random()*10) % 3); //Option number generated for next move between snake, ladder and no play.
 			
 			switch(option_num) {
