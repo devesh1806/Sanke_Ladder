@@ -21,7 +21,9 @@ public class Snakeladder {
 			case no_play:         //case for move regarding no play
 				break;  
 			case ladder:         //case for move regarding ladder   
-				player_pos = player_pos + ran_num; 
+				int temp = player_pos;  //temp variable for storing current player position.
+				player_pos = player_pos + ran_num;
+				if (player_pos>100) player_pos = temp;  //condition for exact winning condition so that position won't go beyond 100. 
 				break;
 			case snake:        //case for move regarding snake
 				player_pos = player_pos - ran_num;
